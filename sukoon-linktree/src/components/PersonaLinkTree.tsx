@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
-const PersonaLinkTree = () => {
-  const containerStyle = {
+interface Persona {
+  name: string;
+  description: string;
+  link: string;
+  tags: string[];
+}
+
+const PersonaLinkTree: React.FC = () => {
+  const containerStyle: CSSProperties = {
     maxWidth: '1200px',
     margin: '0 auto',
     padding: '20px',
     fontFamily: 'Arial, sans-serif',
   };
 
-  const headerStyle = {
+  const headerStyle: CSSProperties = {
     textAlign: 'center',
     marginBottom: '40px',
   };
 
-  const gridStyle = {
+  const gridStyle: CSSProperties = {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
     gap: '20px',
     padding: '20px',
   };
 
-  const cardStyle = {
+  const cardStyle: CSSProperties = {
     backgroundColor: 'white',
     border: '1px solid #e0e0e0',
     borderRadius: '10px',
@@ -28,26 +35,26 @@ const PersonaLinkTree = () => {
     boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
   };
 
-  const titleStyle = {
+  const titleStyle: CSSProperties = {
     color: '#2c3e50',
     fontSize: '20px',
     marginBottom: '10px',
   };
 
-  const descriptionStyle = {
+  const descriptionStyle: CSSProperties = {
     color: '#666',
     fontSize: '14px',
     marginBottom: '15px',
   };
 
-  const tagsContainerStyle = {
+  const tagsContainerStyle: CSSProperties = {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '8px',
     marginBottom: '15px',
   };
 
-  const tagStyle = {
+  const tagStyle: CSSProperties = {
     backgroundColor: '#e3f2fd',
     color: '#1976d2',
     padding: '5px 10px',
@@ -55,7 +62,7 @@ const PersonaLinkTree = () => {
     fontSize: '12px',
   };
 
-  const buttonStyle = {
+  const buttonStyle: CSSProperties = {
     backgroundColor: '#1976d2',
     color: 'white',
     border: 'none',
@@ -66,7 +73,7 @@ const PersonaLinkTree = () => {
     fontSize: '14px',
   };
 
-  const personas = [
+  const personas: Persona[] = [
     {
       name: "Rohan Mehta",
       description: "21-year-old Computer Science student from Mumbai dealing with anxiety and academic pressure",
